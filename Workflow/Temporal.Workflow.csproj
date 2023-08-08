@@ -12,9 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Hotel\Hotel.csproj" />
-    <ProjectReference Include="..\Payment\Payment.csproj" />
-    <ProjectReference Include="..\Ticket\Ticket.csproj" />
+    <ProjectReference Include="..\Application\Hotel\Hotel.csproj" />
+    <ProjectReference Include="..\Application\Payment\Payment.csproj" />
+    <ProjectReference Include="..\Application\Ticket\Ticket.csproj" />
   </ItemGroup>
 
 </Project>
