@@ -1,6 +1,6 @@
 ﻿using Temporalio.Workflows;
 
-namespace Test
+namespace Temporal
 {
     [Workflow]
     public class BookRoomWorkflow

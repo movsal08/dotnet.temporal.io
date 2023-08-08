@@ -1,6 +1,6 @@
 ﻿using Temporalio.Client;
 
-namespace Test.Client
+namespace Temporal.Client
 {
     internal class Program
     {

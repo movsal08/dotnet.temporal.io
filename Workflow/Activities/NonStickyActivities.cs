@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.Tracing;
 using Temporalio.Activities;
 
-namespace Test
+namespace Temporal
 {
     public class NonStickyActivities
     {

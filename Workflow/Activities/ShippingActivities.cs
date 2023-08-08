@@ -1,6 +1,6 @@
 ﻿using Temporalio.Activities;
 
-namespace Test
+namespace Temporal
 {
     public class ShippingActivities
     {

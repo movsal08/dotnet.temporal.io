@@ -1,7 +1,7 @@
 ﻿using Temporalio.Client;
 using Temporalio.Worker;
 
-namespace Test
+namespace Temporal
 {
     internal class Program
     {

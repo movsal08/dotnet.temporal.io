@@ -4,7 +4,7 @@ using System.Text;
 using Temporalio.Activities;
 using TicketApp;
 
-namespace Test
+namespace Temporal
 {
     public static class BookRoomActivities
     {
