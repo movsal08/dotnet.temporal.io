@@ -1,3 +1,5 @@
+[![.NET](https://github.com/movsal08/dotnet.temporal.io/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/movsal08/dotnet.temporal.io/actions/workflows/dotnet.yml)
+
 # .Net temporal workflow use example
 
 ## Prerequisites
