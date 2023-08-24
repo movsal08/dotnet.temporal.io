@@ -25,7 +25,7 @@ namespace Temporal
                 });
 
             await Workflow.ExecuteActivityAsync(
-               () => BookRoomActivities.MakeHotelPayment(false),
+               () => BookRoomActivities.MakeHotelPayment(),
                new()
                {
                    StartToCloseTimeout = TimeSpan.FromMinutes(2)

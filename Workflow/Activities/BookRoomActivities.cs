@@ -37,20 +37,13 @@ namespace Temporal
         }
 
         [Activity]
-        public static string MakeHotelPayment(bool isSync)
+        public static string MakeHotelPayment()
         {
-            if (isSync)
-            {
-                var (Success, Error) = MakePayment();
+            var (Success, Error) = MakePayment();
 
-                if (!Success)
-                {
-                    return Error;
-                }
-            }
-            else
+            if (!Success)
             {
-                Task.Run(() => MakePaymentAsync());
+                return Error;
             }
 
             return "Payment success!";
@@ -117,32 +110,6 @@ namespace Temporal
             }
 
             return (true, string.Empty);
-        }
-
-        private static async Task MakePaymentAsync()
-        {
-            Thread.Sleep(3000);
-            Console.WriteLine("Async payment process started.");
-
-            Thread.Sleep(1000);
-
-            var paymentMade = Payment.MakePayment();
-
-            if (!paymentMade)
-            {
-                StringBuilder backupResult = new();
-
-                backupResult.AppendLine(Hotel.BackupReserveRoom());
-                backupResult.AppendLine(Ticket.BackupBookTicket());
-                backupResult.AppendLine(Payment.BackupMakePayment());
-
-                backupResult.AppendLine("Failed to make payment");
-
-                Console.WriteLine("Async payment process felled.");
-                Console.WriteLine(backupResult.ToString());
-            }
-
-            Console.WriteLine("Async payment process success.");
         }
     }
 }
