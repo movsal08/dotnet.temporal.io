@@ -9,25 +9,25 @@ The project is structured into several namespaces, each representing different a
 - TicketApp: Simulates ticket reservation and backup operations.
 - Temporal.Client: A client application that triggers the execution of workflows using Temporal.
 - Temporal.Workflow: Contains workflow and activity implementations.
-- BookRoomActivities: Defines activities for booking hotel rooms, tickets, and making payments.
-- ShippingActivities: Defines an activity for shipping processes.
+- BookRoomActivities: Defines activities for booking hotel rooms, and tickets, and making payments.
+- SendRoomTokenActivities: Defines an activity for sending a room token to the user.
 - BookRoomWorkflow: Defines a Temporal workflow for booking rooms and tickets, and making payments.
-- ShippingWorkflow: Defines a Temporal workflow for shipping processes.
+- SendRoomTokenChildWorkflow: Defines a Temporal child workflow for send room token processes.
   
 ## How It Works
 The project demonstrates the creation and execution of workflows using Temporal's programming model. It involves:
 
-- Initiating workflows for booking rooms, tickets, and making payments.
-- Performing activities such as room booking, ticket reservation, payment processing, and shipping.
+- Initiating workflows for booking rooms, and tickets, and making payments.
+- Performing activities such as room booking, ticket reservation, payment processing, and asynchronously sending room tokens.
 - Managing workflow state and timeouts for different activities.
   
 ## Getting Started
-You need to install temporal cluster before run this application.
+You need to install temporal cluster before running this application.
 
 The following steps will run a local instance of the Temporal Server using the default configuration file (`docker-compose.yml`):
 
 1. Clone this repository.
-2. Change directory into the root of the project.
+2. Change the directory to the root of the project.
 3. Run the `docker-compose up` command.
 
 ```bash
