@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{99AD40
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Temporal.Client", "Client\Temporal.Client.csproj", "{8EA88643-11CE-4C4E-8D65-B5D454FBDCCB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflow", "Workflow", "{82A2ABE1-7BBE-4F92-9475-06182A73E5AD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Worker", "Worker", "{82A2ABE1-7BBE-4F92-9475-06182A73E5AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Temporal.Worker", "Workflow\Temporal.Worker.csproj", "{B0DCEEA5-D52E-4F4D-B30B-813A79FF5E55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Temporal.Worker", "Worker\Temporal.Worker.csproj", "{B0DCEEA5-D52E-4F4D-B30B-813A79FF5E55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
