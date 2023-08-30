@@ -2,14 +2,14 @@
 
 namespace Temporal
 {
-    public class ShippingActivities
+    public class SendRoomTokenActivities
     {
         [Activity]
         public static string StartShipping()
         {
-            Console.WriteLine("Phone shipped!");
+            Console.WriteLine("Room token sent");
 
-            return "Shipped!";
+            return "Token sent!";
         }
     }
 }

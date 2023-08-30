@@ -3,7 +3,7 @@
 namespace Temporal
 {
     [Workflow]
-    public class ShippingWorkflow
+    public class SendRoomTokenChildWorkflow
     {
         [WorkflowRun]
         public async Task<string> RunAsync()
@@ -11,7 +11,7 @@ namespace Temporal
             string result = string.Empty;
 
             result += await Workflow.ExecuteActivityAsync(
-                  () => ShippingActivities.StartShipping(),
+                  () => SendRoomTokenActivities.StartShipping(),
                   new()
                   {
                       StartToCloseTimeout = TimeSpan.FromMinutes(2)

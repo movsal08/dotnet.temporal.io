@@ -1,4 +1,5 @@
-﻿using Temporalio.Workflows;
+﻿using Temporalio.Api.Update.V1;
+using Temporalio.Workflows;
 
 namespace Temporal
 {
@@ -24,12 +25,21 @@ namespace Temporal
                     StartToCloseTimeout = TimeSpan.FromMinutes(2)
                 });
 
-            await Workflow.ExecuteActivityAsync(
+            result += await Workflow.ExecuteActivityAsync(
                () => BookRoomActivities.MakeHotelPayment(),
                new()
                {
                    StartToCloseTimeout = TimeSpan.FromMinutes(2)
                });
+
+            // Start child workflow asynchronously
+            await Workflow.StartChildWorkflowAsync(
+                (SendRoomTokenChildWorkflow wf) => wf.RunAsync(), 
+                new()
+                {
+                    Id = $"child[send-token][{Guid.NewGuid()}]",
+                    ParentClosePolicy = ParentClosePolicy.Abandon
+                });
 
             return result;
         }

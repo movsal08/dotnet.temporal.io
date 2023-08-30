@@ -20,16 +20,7 @@ namespace Temporal.Client
                 Array.Empty<object>(),
                 new(id: workflowId, taskQueue: "my-task-queue"));
 
-            var shipWorkflowId = "ship-phone-" + Guid.NewGuid().ToString();
-            Console.WriteLine("Shipping workflow id: {0}", shipWorkflowId);
-            // Run secound workflow
-            var resultFromShipping = await client.ExecuteWorkflowAsync<string>(
-                "ShippingWorkflow",
-                Array.Empty<object>(),
-                new(id: shipWorkflowId, taskQueue: "my-task-queue"));
-
             Console.WriteLine("Workflow result: {0}", result);
-            Console.WriteLine("Workflow result: {0}", resultFromShipping);
 
             Console.ReadKey();
         }

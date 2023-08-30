@@ -26,9 +26,9 @@ namespace Temporal
                     AddActivity(BookRoomActivities.BookHotelRoom).
                     AddActivity(BookRoomActivities.BookHotelTicket).
                     AddActivity(BookRoomActivities.MakeHotelPayment).
-                    AddActivity(ShippingActivities.StartShipping).
+                    AddActivity(SendRoomTokenActivities.StartShipping).
                     AddWorkflow<BookRoomWorkflow>().
-                    AddWorkflow<ShippingWorkflow>());
+                    AddWorkflow<SendRoomTokenChildWorkflow>());
             try
             {
                 await worker.ExecuteAsync(tokenSource.Token);
